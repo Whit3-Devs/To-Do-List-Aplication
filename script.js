@@ -4,6 +4,7 @@ const btn_todo = document.getElementById('btn-todo')
 const list_todo = document.getElementById('list-todo')
 
 
+
 btn_todo.addEventListener('click', (e) => {
   e.preventDefault()
 
@@ -14,8 +15,9 @@ btn_todo.addEventListener('click', (e) => {
   list_element.textContent = text_input
   const checkbox_element = document.createElement('input')
   checkbox_element.setAttribute('type', 'checkbox')
-  checkbox_element.setAttribute('id', 'chekbox-element')
-  checkbox_element.setAttribute('class', 'chekbox-element')
+  checkbox_element.setAttribute('id', 'checkbox-element')
+  checkbox_element.setAttribute('class', 'checkbox-element')
+  checkbox_element.setAttribute('value', 'check')
   list_element.appendChild(checkbox_element)
   
   if(list_element.textContent != '') {
@@ -23,6 +25,12 @@ btn_todo.addEventListener('click', (e) => {
   }
 
   input_todo.value = ''
+})
 
-  console.log(list_element)
+list_todo.addEventListener('change', (e) => {
+  const checked = e.target.checked
+  const list_element = e.target.parentNode
+
+  if(checked) list_element.classList.add('check');
+  else list_element.classList.remove('check');
 })

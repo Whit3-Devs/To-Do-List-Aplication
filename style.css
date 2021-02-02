@@ -1,9 +1,9 @@
 * {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
-  background-color: #E0E4CC;
+  background-color: #e0e4cc;
   margin: 0;
   box-sizing: border-box;
 }
@@ -13,13 +13,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #A7DBD8;
+  background-color: #a7dbd8;
   padding: 30px 0 30px;
 }
 
 .header-todo {
   box-sizing: border-box;
-  background-color: #69D2E7;
+  background-color: #69d2e7;
   height: 100px;
   width: 500px;
   display: flex;
@@ -30,7 +30,10 @@ body {
 }
 
 h1 {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
+  color: #f67280;
+  /*text-decoration: underline;*/
+  border-bottom: 4px solid #f67280;
 }
 
 .form-todo {
@@ -44,8 +47,9 @@ h1 {
 .input-todo {
   width: 190px;
   min-height: 25px;
-  border: 2px solid #F8B195;
+  border: 2px solid #f8b195;
   border-radius: 7px;
+  padding-left: 10px;
 }
 
 .btn-todo {
@@ -53,14 +57,14 @@ h1 {
   min-height: 30px;
   text-align: center;
   text-decoration: none;
-  background-color:#F67280;
-  border: 2px solid #F8B195;
+  background-color: #f67280;
+  border: 2px solid #f8b195;
   border-radius: 7px;
-  color:#F9F2F1;
+  color: #f9f2f1;
 }
 
 .body-todo {
-  background-color: #69D2E7;
+  background-color: #69d2e7;
   margin-top: 20px;
   width: 500px;
   min-height: 30px;
@@ -75,10 +79,10 @@ h1 {
 }
 
 .list-element {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   list-style: none;
-  background-color: #F9F2F1;
+  background-color: #f9f2f1;
   border-radius: 7px;
   margin: 7px 10px 7px;
   padding: 5px 5px 5px 20px;
@@ -86,8 +90,13 @@ h1 {
 }
 
 .checkbox-element {
-  background-color: #E0E4CC;
   border-radius: 5px;
+  
+}
+
+.check {
+  text-decoration: line-through;
+  color: #999;
 }
 
 .btn-todo {
