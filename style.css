@@ -3,102 +3,138 @@
 }
 
 body {
-  background-color: #e0e4cc;
+  background-color: #333;
   margin: 0;
   box-sizing: border-box;
 }
 
-.todo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #a7dbd8;
-  padding: 30px 0 30px;
+  .todo {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #0A2338;
+    padding: 30px 0 30px;
+  }
+
+    .header-todo {
+      box-sizing: border-box;
+      background-color: #3B4F77;
+      height: 100px;
+      width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      flex-direction: column;
+    }
+
+      h1 {
+        font-family: "Roboto Mono", monospace;
+        color: #F1F1F0;
+        /*text-decoration: underline;*/
+        border-bottom: 4px solid #F1F1F0;
+      }
+
+      .form-todo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+        .input-todo {
+          width: 190px;
+          min-height: 25px;
+          border: 1px solid #BFD1E7;
+          border-radius: 7px;
+          padding-left: 10px;
+        }
+
+        .btn-todo {
+          width: 100px;
+          min-height: 30px;
+          text-align: center;
+          text-decoration: none;
+          background-color: #3B4F77;
+          border: 1px solid #BFD1E7;
+          border-radius: 7px;
+          color: #f9f2f1;
+          margin-left: 5px;
 }
 
-.header-todo {
-  box-sizing: border-box;
-  background-color: #69d2e7;
-  height: 100px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  flex-direction: column;
-}
-
-h1 {
-  font-family: "Roboto Mono", monospace;
-  color: #f67280;
-  /*text-decoration: underline;*/
-  border-bottom: 4px solid #f67280;
-}
-
-.form-todo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.input-todo {
-  width: 190px;
-  min-height: 25px;
-  border: 2px solid #f8b195;
-  border-radius: 7px;
-  padding-left: 10px;
-}
-
-.btn-todo {
-  width: 100px;
-  min-height: 30px;
-  text-align: center;
-  text-decoration: none;
-  background-color: #f67280;
-  border: 2px solid #f8b195;
-  border-radius: 7px;
-  color: #f9f2f1;
-}
+          .btn-todo:hover {
+            background-color: #BFD1E7;
+            color: #222222;
+          }
 
 .body-todo {
-  background-color: #69d2e7;
+  background-color: #3B4F77;
   margin-top: 20px;
   width: 500px;
   min-height: 30px;
   border-radius: 15px;
 }
 
-.list-todo {
-  display: flex;
-  justify-content: flex-start;
-  flex-flow: column wrap;
-  padding: 0;
-}
+  .list-todo {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    padding: 0;
+  }
 
-.list-element {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  background-color: #f9f2f1;
-  border-radius: 7px;
-  margin: 7px 10px 7px;
-  padding: 5px 5px 5px 20px;
-  box-shadow: 2px 2px 3px #999;
-}
+    .list-element {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style: none;
+      background-color: #5A83B6;
+      border-radius: 7px;
+      margin: 7px 10px 7px;
+      padding: 5px 5px 5px 20px;
+      border: 1px solid #BFD1E7;
+    }
 
-.checkbox-element {
-  border-radius: 5px;
-  
-}
+    .container-buttons {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+    }
 
-.check {
-  text-decoration: line-through;
-  color: #999;
-}
+      .checkbox-element {
+        border-radius: 5px;
+        height: 20px;
+        margin: 0;
+        padding-right: 5px;
+      }
 
-.btn-todo {
-  margin-left: 5px;
+      .checkbox-element:checked {
+        background-color: green;
+      }
+
+      .btn-remove {
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: none;
+        background-image: url(svg/remove.svg);
+        background-size: 20px 20px;
+      }
+
+      .check {
+        text-decoration: line-through;
+        color: #999;
+      }
+
+@media screen and (max-width:480px){
+  .todo {
+    background-color: #333;
+  }
 }
