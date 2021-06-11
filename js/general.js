@@ -24,7 +24,9 @@ const agregarItems = document
 
           const $itemChequeado = document
             .getElementById(`${item_id}`)
-            .addEventListener("click", (e) => {});
+            .addEventListener("click", (e) => {
+              console.log("viendo como encarar");
+            });
         });
       }
     }
