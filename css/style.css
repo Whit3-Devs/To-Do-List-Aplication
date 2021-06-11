@@ -145,12 +145,23 @@ h1 {
   height: 25px;
   padding: 0;
   border: none;
-  background-image: url(/svg/check-grey.svg);
+
   background-size: 25px 25px;
   cursor: pointer;
 }
-.btn-check:hover {
+
+.check-grey {
+  background-image: url(/svg/check-grey.svg);
+}
+.check-grey:hover {
   background-image: url(/svg/check-green.svg);
+}
+
+.check-green {
+  background-image: url(/svg/check-green.svg);
+}
+.check-green:hover {
+  background-image: url(/svg/check-grey.svg);
 }
 
 .check {

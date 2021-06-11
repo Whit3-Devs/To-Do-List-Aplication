@@ -7,8 +7,8 @@ function crearItem(contador, texto) {
   const content_list = `
     <p id="paragraph-elementList" class="paragraph-elementList">${texto}</p>
     <span id="container-buttons" class="container-buttons">
-      <button id="btn-check" class="btn-check"></button>
-      <button id="btn-remove" class="btn-remove"></button>
+      <button id="btn-check-${contador}" class="btn-check check-grey"></button>
+      <button id="btn-remove-${contador}" class="btn-remove remove-grey"></button>
     </span>`;
 
   list_element.innerHTML = content_list;
