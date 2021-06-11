@@ -8,7 +8,7 @@ function crearItem(contador, texto) {
     <p id="paragraph-elementList" class="paragraph-elementList">${texto}</p>
     <span id="container-buttons" class="container-buttons">
       <button id="btn-check-${contador}" class="btn-check check-grey"></button>
-      <button id="btn-remove-${contador}" class="btn-remove remove-grey"></button>
+      <button id="btn-remove-${contador}" class="btn-remove remove"></button>
     </span>`;
 
   list_element.innerHTML = content_list;
@@ -17,6 +17,10 @@ function crearItem(contador, texto) {
 }
 
 function renderItems_list(array) {
+  while ($list_todo.firstChild) {
+    $list_todo.removeChild($list_todo.firstChild);
+  }
+
   array.forEach((item) => {
     $list_todo.appendChild(item);
   });

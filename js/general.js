@@ -5,10 +5,9 @@ let arrayItem_list = [];
 
 let datosItems = {
   arrayItem_list: [],
-  arrayCheck: [],
-  arrayDelete: [],
 };
 
+// Botón Add
 const agregarItems = document
   .getElementById("btn-todo")
   .addEventListener("click", (e) => {
@@ -48,7 +47,12 @@ const agregarItems = document
       const $itemEliminado = document
         .getElementById(`${delete_itemId}`)
         .addEventListener("click", (e) => {
-          console.log(e.target);
+          // console.log(e.target.parentElement.parentElement);
+          const item_delete = e.target.parentElement.parentElement;
+          const item_positionDelete =
+            datosItems.arrayItem_list.indexOf(item_delete);
+          datosItems.arrayItem_list.splice(item_positionDelete, 1);
+          renderItems_list(datosItems.arrayItem_list);
         });
     }
   });
@@ -58,7 +62,3 @@ if (contador > 0) {
     let item_id = item.id;
   });
 }
-
-$list_todo.addEventListener("change", () => {
-  // console.log($list_todo.children);
-});
